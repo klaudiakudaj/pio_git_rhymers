@@ -1,6 +1,5 @@
 package edu.kis.vh.nursery;
-import edu.kis.vh.nursery.defaultCountingOutRhymer;
-import edu.kis.vh.nursery.HanoiRhymer;
+
 import edu.kis.vh.nursery.factory.DefaultRhymersFactory;
 import edu.kis.vh.nursery.factory.Rhymersfactory;
 class RhymersDemo {
@@ -26,9 +25,9 @@ class RhymersDemo {
 
     
 
-        for (defaultCountingOutRhymer rhymer : rhymers) {
-            while (!rhymer.callCheck())
-                System.out.print(rhymer.countOut() + "  ");
+        for (int i = 0; i < rhymers.length; i++) {
+            while (!rhymers[i].callCheck())
+                System.out.print(rhymers[i].countOut() + "  ");
             System.out.println();
         }
 
